@@ -1,0 +1,14 @@
+{
+  "schema": "slipmark/attestation@2",
+  "by": "paul",
+  "verdict": "pass",
+  "at": "2026-10-25T19:27:56.536Z",
+  "subjects": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "69f80a81b71e84489366f79f728f3416445ad3ac901688c6e165bc39351e323c"
+    }
+  ],
+  "kind": "human",
+  "note": "Read the diff on GitHub"
+}
