@@ -1,0 +1,5 @@
+{
+  "schema": "slipmark/policy@1",
+  "coverage": { "mode": "diff", "base": "origin/main", "ignore": ["README.md", "results/**"] },
+  "context": {}
+}

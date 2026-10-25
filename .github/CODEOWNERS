@@ -1,0 +1,6 @@
+# Agent instructions, the gate's policy and workflows need a human owner's review.
+/AGENTS.md          @founder-ship-it
+/.mcp.json          @founder-ship-it
+/.claude/           @founder-ship-it
+/.slipmark/         @founder-ship-it
+/.github/           @founder-ship-it
