@@ -2,11 +2,11 @@
   "schema": "slipmark/attestation@2",
   "by": "review-agent",
   "verdict": "pass",
-  "at": "2026-10-25T19:27:55.152Z",
+  "at": "2026-10-25T19:27:56.376Z",
   "subjects": [
     {
       "path": "src/pay.ts",
-      "sha256": "6cb38eec688f25e0998bea2ca843e4897ff1f3e5a00d37136547e5c3f290828e"
+      "sha256": "e07b527d7d8d7e801f7a3082bf48a345df98b42682fa7cd9b0a6ed0abd50f1e3"
     }
   ],
   "kind": "agent",
