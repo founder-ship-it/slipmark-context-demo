@@ -1,0 +1,22 @@
+{
+  "schema": "slipmark/attestation@2",
+  "by": "review-agent",
+  "verdict": "pass",
+  "at": "2026-10-25T19:27:56.182Z",
+  "subjects": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "0ac2cf7db1ab25ecd9a3aed4fce5608e0d9f780cf2721643ea889b24366c2d8d"
+    },
+    {
+      "path": "src/pay.ts",
+      "sha256": "6cb38eec688f25e0998bea2ca843e4897ff1f3e5a00d37136547e5c3f290828e"
+    }
+  ],
+  "kind": "agent",
+  "agent": {
+    "model": "claude-sonnet-5-5",
+    "harness": "claude-code"
+  },
+  "note": "Reviewed, looks good"
+}
