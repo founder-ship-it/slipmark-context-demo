@@ -2,7 +2,7 @@
   "schema": "slipmark/attestation@2",
   "by": "review-agent",
   "verdict": "pass",
-  "at": "2026-10-25T19:27:55.152Z",
+  "at": "2026-10-25T19:27:56.611Z",
   "subjects": [
     {
       "path": "src/pay.ts",
@@ -21,7 +21,7 @@
     },
     {
       "path": "AGENTS.md",
-      "sha256": "b6190e169b571e1f05b90bbf0e7a6cd8d5fe8ff4986e335afce227365cb80dea"
+      "sha256": "69f80a81b71e84489366f79f728f3416445ad3ac901688c6e165bc39351e323c"
     }
   ],
   "note": "Reviewed, looks good"
