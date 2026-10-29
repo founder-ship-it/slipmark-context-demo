@@ -2,7 +2,17 @@
   "mcpServers": {
     "docs": {
       "command": "npx",
-      "args": ["-y", "@example/docs-mcp@1.4.2"]
+      "args": [
+        "-y",
+        "@example/docs-mcp@1.4.2"
+      ]
+    },
+    "repo-helper": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@example/repo-helper-mcp@latest"
+      ]
     }
   }
 }
