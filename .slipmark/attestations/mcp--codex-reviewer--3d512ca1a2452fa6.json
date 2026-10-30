@@ -1,18 +1,17 @@
 {
   "schema": "slipmark/attestation@2",
-  "by": "review-agent",
+  "by": "codex-reviewer",
   "verdict": "pass",
-  "at": "2026-10-25T19:27:55.152Z",
+  "at": "2026-10-30T08:48:28.193Z",
   "subjects": [
     {
       "path": "src/pay.ts",
-      "sha256": "6cb38eec688f25e0998bea2ca843e4897ff1f3e5a00d37136547e5c3f290828e"
+      "sha256": "2ddb42b491408ce34f7623c0e07d2e16398676dd0f824273cb8c5fc2a06a8f8b"
     }
   ],
   "kind": "agent",
   "agent": {
-    "model": "claude-sonnet-5-5",
-    "harness": "claude-code"
+    "harness": "codex"
   },
   "context": [
     {
@@ -24,5 +23,5 @@
       "sha256": "b6190e169b571e1f05b90bbf0e7a6cd8d5fe8ff4986e335afce227365cb80dea"
     }
   ],
-  "note": "Reviewed, looks good"
+  "note": "Zero and negative amounts now return no fee; other amounts unchanged"
 }
