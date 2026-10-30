@@ -23,7 +23,7 @@ attacker's would. Look at the checks on each.
 | `attack/loosen-policy` | Deletes the `context` section from the policy, then hides a comment in AGENTS.md | Refused: the policy is read from `main`, not the PR |
 | `ok/code-change` | A normal code fix with a fresh agent verdict | Passes |
 | `ok/approved-context` | A visible change to AGENTS.md, approved by a person | Passes |
-| `ok/codex-mcp` | A code fix whose verdict went in through `slipmark mcp`, the MCP server Codex, Cursor and Copilot call | Passes |
+| `ok/codex-mcp-2` | A code fix whose verdict went in through `slipmark mcp`, the MCP server Codex, Cursor and Copilot call | Passes |
 
 The injected text is labelled `DEMO INJECTION` and does nothing harmful.
 
@@ -74,7 +74,7 @@ command = "npx"
 args = ["-y", "slipmark@0.6.1", "mcp"]
 ```
 
-The verdict in `ok/codex-mcp` was recorded through that server with
+The verdict in `ok/codex-mcp-2` was recorded through that server with
 `harness: codex`, by an MCP client calling `slipmark_attest` the way Codex
 does. It is the same gate: change the file, or AGENTS.md, and it stops
 counting. Setup for other agents is in the
