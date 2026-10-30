@@ -9,7 +9,7 @@ the agent was told: an AGENTS.md pointing at an image with hidden text
 A review verdict bound only to the code can be valid on paper and worthless in
 practice.
 
-This repo runs [Slipmark](https://github.com/founder-ship-it/Slipmark) v0.5.0
+This repo runs [Slipmark](https://github.com/founder-ship-it/Slipmark) v0.6.1
 with one line in its policy, `"context": {}`. Each open pull request is one
 attack. Every attacking PR also carries a passing verdict from an agent, as an
 attacker's would. Look at the checks on each.
@@ -23,6 +23,7 @@ attacker's would. Look at the checks on each.
 | `attack/loosen-policy` | Deletes the `context` section from the policy, then hides a comment in AGENTS.md | Refused: the policy is read from `main`, not the PR |
 | `ok/code-change` | A normal code fix with a fresh agent verdict | Passes |
 | `ok/approved-context` | A visible change to AGENTS.md, approved by a person | Passes |
+| `ok/codex-mcp` | A code fix whose verdict went in through `slipmark mcp`, the MCP server Codex, Cursor and Copilot call | Passes |
 
 The injected text is labelled `DEMO INJECTION` and does nothing harmful.
 
@@ -61,6 +62,23 @@ npx slipmark@0.5.0 init
 
 Then add `"context": {}` to `.slipmark/policy.json`. Details and limits are in
 the [docs](https://github.com/founder-ship-it/Slipmark/blob/main/docs/attestation.md#agent-context).
+
+## With Codex, Cursor or Copilot
+
+Agents that speak MCP record verdicts through `slipmark mcp` instead of the
+command line. For OpenAI Codex, in `~/.codex/config.toml`:
+
+```toml
+[mcp_servers.slipmark]
+command = "npx"
+args = ["-y", "slipmark@0.6.1", "mcp"]
+```
+
+The verdict in `ok/codex-mcp` was recorded through that server with
+`harness: codex`, by an MCP client calling `slipmark_attest` the way Codex
+does. It is the same gate: change the file, or AGENTS.md, and it stops
+counting. Setup for other agents is in the
+[MCP docs](https://github.com/founder-ship-it/Slipmark/blob/main/docs/mcp.md).
 
 ## What it doesn't cover
 
